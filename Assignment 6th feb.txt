@@ -1,0 +1,65 @@
+Assignment 6th feb
+
+Answer1
+public class Q1 {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("shubham");
+        System.out.println("Before change ="+sb);
+        sb.append("mane");
+        System.out.println("After change ="+sb);
+    }
+}
+
+Answer2
+//WAP to reverse a string.
+public class Q2 {
+    public static void main(String[] args) {
+        String inpuString = "PWSKILLS";
+        String outpuString = "";
+        for(int i=inpuString.length()-1 ; i>=0 ;i--){
+            outpuString = outpuString+inpuString.charAt(i);
+        }
+
+        System.out.println(outpuString);
+    }
+}
+
+Answer3
+//WAP to reverse a sentence while preserving spaces
+public class Q3 {
+  public static void main(String[] args) {
+    String input = "Think Twice";
+    String arr[] = input.split(" ");
+    String output="";
+    for (String s : arr) {
+      for (int i = s.length()-1; i>=0; i--) {
+        output = output + s.charAt(i);
+      }
+      output += " ";
+    }
+
+    System.out.println(output);
+  }  
+}
+
+Answer4
+//WAP to sort string alphabetically.
+public class Q4 {
+  public static void main(String[] args) {
+    String s = "gfedcba";
+    char c[] = s.toCharArray();
+    for(int i=0 ; i<c.length-1;i++)
+    {
+      for(int j=i+1 ; j<c.length;j++){
+        char temp =' ';
+          if (c[i]>c[j]) {
+            temp = c[i];
+            c[i] = c[j];
+            c[j] = temp;
+          }
+      }
+    }
+
+    System.out.println(new String(c));
+  }  
+}
